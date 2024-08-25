@@ -25,9 +25,9 @@ CREATE TABLE Enrollments (
 );
 -- Insert data into Students table
 INSERT INTO Students (first_name, last_name, email, date_of_birth) VALUES
-('John', 'Doe', 'john.doe@example.com', '2000-01-15'),
-('Jane', 'Smith', 'jane.smith@example.com', '1999-06-21'),
-('Mike', 'Johnson', 'mike.johnson@example.com', '2001-03-12');
+('Janu', 'Dev', 'janu.dev@example.com', '2002-07-02'),
+('Jane', 'Smith', 'jane.smith@example.com', '2004-02-19'),
+('Navi', 'Nani', 'navi.nani@example.com', '2000-01-08');
 
 -- Insert data into Courses table
 INSERT INTO Courses (course_name, course_description) VALUES
