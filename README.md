@@ -1,4 +1,4 @@
-# **Name**: JESHNAVI CHINTAPALLI
+# **Name**:JESHNAVI CHINTAPALLI
 # **Company**:CODTECH IT SOLUTIONS
 # **ID**:CT04DS7431
 # **Domain**:SQL
@@ -6,7 +6,7 @@
 # **Mentor**:Santhosh kumar
 
 # **Overview of the project**
-# **Project**:STUDENT DATABASE MANAGEMENT
+# **Project**: STUDENT DATABASE MANAGEMENT
 # **Objective**
 The objective of this project is to design and implement a database scheme to store specific data of stuent records,including personal details,courses and grades, and to practise creating and managing relational databases.
 # **Key Activities**
