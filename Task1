@@ -1,0 +1,89 @@
+/*STUDENT DATABASE MANAGEMENT*/
+
+
+CREATE TABLE Students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    date_of_birth DATE
+);
+
+CREATE TABLE Courses (
+    course_id INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(100),
+    course_description TEXT
+);
+
+CREATE TABLE Enrollments (
+    enrollment_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+    grade VARCHAR(2),
+    FOREIGN KEY (student_id) REFERENCES Students(student_id),
+    FOREIGN KEY (course_id) REFERENCES Courses(course_id)
+);
+-- Insert data into Students table
+INSERT INTO Students (first_name, last_name, email, date_of_birth) VALUES
+('John', 'Doe', 'john.doe@example.com', '2000-01-15'),
+('Jane', 'Smith', 'jane.smith@example.com', '1999-06-21'),
+('Mike', 'Johnson', 'mike.johnson@example.com', '2001-03-12');
+
+-- Insert data into Courses table
+INSERT INTO Courses (course_name, course_description) VALUES
+('Mathematics', 'An introduction to mathematical concepts'),
+('Physics', 'Fundamentals of physics'),
+('Computer Science', 'Basics of computer programming and algorithms');
+
+-- Insert data into Enrollments table
+INSERT INTO Enrollments (student_id, course_id, grade) VALUES
+(1, 1, 'A'),
+(1, 2, 'B'),
+(2, 2, 'A'),
+(3, 3, 'C');
+
+--Select all students
+SELECT * FROM Students;
+
+--Select all courses:
+SELECT * FROM Courses;
+
+--Select all enrollments:
+SELECT * FROM Enrollments;
+
+--Update a student's email:
+UPDATE Students
+SET email = 'john.newemail@example.com'
+WHERE student_id = 1;
+
+--Delete a course by course_id:
+DELETE FROM Courses
+WHERE course_id = 3;
+
+ 'Implementing Joins to Combine Data from Multiple Tables'
+--Join to get students and their enrolled courses
+
+SELECT 
+    Students.first_name, 
+    Students.last_name, 
+    Courses.course_name, 
+    Enrollments.grade
+FROM 
+    Enrollments
+JOIN 
+    Students ON Enrollments.student_id = Students.student_id
+JOIN 
+    Courses ON Enrollments.course_id = Courses.course_id;
+
+
+--Join to get all courses with the number of students enrolled
+
+SELECT 
+    Courses.course_name, 
+    COUNT(Enrollments.student_id) AS number_of_students
+FROM 
+    Courses
+LEFT JOIN 
+    Enrollments ON Courses.course_id = Enrollments.course_id
+GROUP BY 
+    Courses.course_name;
