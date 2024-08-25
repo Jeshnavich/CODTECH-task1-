@@ -28,5 +28,5 @@ Used for data manipulation and analysis
 # **Key Insights**:
 ## **Student performance threads**: 
 Analyze grade data to identify trends in student performance such as strengths and weaknesses in specific subjects
-## ** Course Effectiveness**:
+## **Course Effectiveness**:
 Evaluate course data to determine effectiveness including student engagement and grade outcomes
