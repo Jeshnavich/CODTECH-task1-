@@ -1,4 +1,4 @@
-# **Name**:JESHNAVI CHINTAPALLI
+# **Name**: JESHNAVI CHINTAPALLI
 # **Company**:CODTECH IT SOLUTIONS
 # **ID**:CT04DS7431
 # **Domain**:SQL
